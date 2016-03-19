@@ -1,0 +1,8 @@
+﻿Group: Payment methods
+FriendlyName: Credit Card - www.vcs.co.za
+SystemName: Payments.VCS
+Version: 1.00
+SupportedVersions: 3.60, 3.70
+Author: piet@djbt.co.za
+DisplayOrder: 1
+FileName: DJBT.Plugin.Payments.VCS.dll

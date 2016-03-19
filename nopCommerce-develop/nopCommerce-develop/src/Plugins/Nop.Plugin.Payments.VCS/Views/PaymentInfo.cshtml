@@ -1,0 +1,14 @@
+﻿@{
+    Layout = "";
+}
+@using Nop.Web.Framework;
+@using DJBT.Plugin.Payments.VCS.Models;
+@model PaymentInfoModel
+<table width="100%" cellspacing="2" cellpadding="1" border="0">
+    <tr>
+        <td>
+            @Html.NopLabelFor(model => model.Instruction, false)
+        </td>
+    </tr>
+
+</table>

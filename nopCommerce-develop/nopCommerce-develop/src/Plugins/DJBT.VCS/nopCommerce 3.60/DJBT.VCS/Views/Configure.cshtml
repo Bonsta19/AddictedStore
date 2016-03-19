@@ -1,0 +1,69 @@
+﻿@{
+    Layout = "";
+}
+@using Nop.Web.Framework;
+@using DJBT.Plugin.Payments.VCS.Models;
+@model VCSPaymentModel
+
+@Html.Action("StoreScopeConfiguration", "Setting", new { area = "Admin" })
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <table class="adminContent">
+
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.DescriptionOfGoods):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.DescriptionOfGoods)
+                @Html.ValidationMessageFor(model => model.DescriptionOfGoods)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.HashParameter):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.HashParameter)
+                @Html.ValidationMessageFor(model => model.HashParameter)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.TerminalId):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.TerminalId)
+                @Html.ValidationMessageFor(model => model.TerminalId)
+            </td>
+        </tr>
+
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.AdditionalFee):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.AdditionalFee)
+                @Html.ValidationMessageFor(model => model.AdditionalFee)
+            </td>
+        </tr>
+
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.Instruction):
+            </td>
+            <td class="adminData">
+                @Html.TextAreaFor(model => model.Instruction, new { style = "width:600px;height:90px;" })
+                @Html.ValidationMessageFor(model => model.Instruction)
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <input type="submit" name="save" class="k-button" value="@T("Admin.Common.Save")" />
+            </td>
+        </tr>
+    </table>
+
+}
